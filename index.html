@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f4f0" />
+    <meta name="description" content="Fjallraven Polar application by Katie Ensor." />
+    <title>Fjällräven Polar | Application - Katie Ensor</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f5f4f0;
+        --ink: #182a29;
+        --line: #dcded8;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { width: min(100% - 48px, 1200px); margin-inline: auto; }
+
+      .site-header { border-bottom: 1px solid var(--line); }
+      .header-inner {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 8px 28px;
+        padding-block: 28px;
+      }
+      .brand {
+        font-size: .9rem;
+        font-weight: 800;
+        letter-spacing: .04em;
+        color: rgb(169, 61, 48);
+        display: inline-block
+      }
+      .text-black {
+        color: #1C1C1C
+      }
+      .application {
+        color: #1C1C1C;
+        font-size: .88rem;
+        font-weight: 500;
+        margin-left: auto;
+        text-align: right;
+        display: inline-block;
+      }
+
+      main { padding-block: clamp(24px, 5vw, 64px) clamp(60px, 9vw, 120px); }
+      .video-placeholder {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: radial-gradient(ellipse at 70% 10%, #526b68, transparent 54%),
+                    linear-gradient(145deg, #334d4b, #182d30 60%, #101d22);
+      }
+      .play-icon {
+        display: grid;
+        place-items: center;
+        width: clamp(56px, 8vw, 84px);
+        aspect-ratio: 1;
+        border: 1px solid #ffffffad;
+        border-radius: 50%;
+        color: white;
+      }
+      .play-icon svg { width: 24px; height: 24px; margin-left: 4px; fill: currentColor; }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: clamp(12px, 2vw, 24px);
+        margin-top: clamp(12px, 2vw, 24px);
+      }
+      .image-placeholder {
+        display: grid;
+        place-items: center;
+        min-width: 0;
+        aspect-ratio: 4 / 3;
+        color: #ffffffb8;
+        background: linear-gradient(145deg, #819691, #4c6764);
+      }
+      .image-placeholder:nth-child(2) { background: linear-gradient(145deg, #b2a895, #79877f); }
+      .image-placeholder:nth-child(3) { background: linear-gradient(145deg, #708788, #364f55); }
+      .image-placeholder svg { width: 36px; height: 36px; fill: none; stroke: currentColor; stroke-width: 1.4; }
+
+      @media (max-width: 640px) {
+        .wrap { width: min(100% - 32px, 1200px); }
+        .header-inner { padding-block: 20px; gap: 4px 16px; }
+        .brand { font-size: .82rem; }
+        .application { font-size: .8rem; }
+        .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .image-placeholder:last-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <span class="brand">Fjällräven <span class="text-black">Polar</span></span>
+        <span class="application">Application - Katie Ensor</span>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <!-- Replace this div with your video or responsive embed. -->
+      <div class="video-placeholder" role="img" aria-label="Video placeholder">
+        <span class="play-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M6 3.8a1 1 0 0 1 1.5-.86l13 8.2a1 1 0 0 1 0 1.7l-13 8.2A1 1 0 0 1 6 20.2V3.8Z" /></svg>
+        </span>
+      </div>
+
+      <div class="gallery" aria-label="Image gallery">
+        <!-- Replace each placeholder div with an img when your photos are ready. -->
+        <div class="image-placeholder" role="img" aria-label="Image placeholder 1">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="6" width="32" height="28" rx="2" /><circle cx="13" cy="15" r="3" /><path d="m5 30 10-10 7 7 5-5 9 9" /></svg>
+        </div>
+        <div class="image-placeholder" role="img" aria-label="Image placeholder 2">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="6" width="32" height="28" rx="2" /><circle cx="13" cy="15" r="3" /><path d="m5 30 10-10 7 7 5-5 9 9" /></svg>
+        </div>
+        <div class="image-placeholder" role="img" aria-label="Image placeholder 3">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="6" width="32" height="28" rx="2" /><circle cx="13" cy="15" r="3" /><path d="m5 30 10-10 7 7 5-5 9 9" /></svg>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
