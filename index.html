@@ -52,24 +52,14 @@
       }
 
       main { padding-block: clamp(24px, 5vw, 64px) clamp(60px, 9vw, 120px); }
-      .video-placeholder {
-        display: grid;
-        place-items: center;
+      .application-video {
+        display: block;
         width: 100%;
-        aspect-ratio: 16 / 9;
-        background: radial-gradient(ellipse at 70% 10%, #526b68, transparent 54%),
-                    linear-gradient(145deg, #334d4b, #182d30 60%, #101d22);
+        max-width: 420px;
+        margin-inline: auto;
+        aspect-ratio: 9 / 16;
+        background: #182d30;
       }
-      .play-icon {
-        display: grid;
-        place-items: center;
-        width: clamp(56px, 8vw, 84px);
-        aspect-ratio: 1;
-        border: 1px solid #ffffffad;
-        border-radius: 50%;
-        color: white;
-      }
-      .play-icon svg { width: 24px; height: 24px; margin-left: 4px; fill: currentColor; }
 
       .gallery {
         display: grid;
@@ -108,12 +98,10 @@
     </header>
 
     <main class="wrap">
-      <!-- Replace this div with your video or responsive embed. -->
-      <div class="video-placeholder" role="img" aria-label="Video placeholder">
-        <span class="play-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M6 3.8a1 1 0 0 1 1.5-.86l13 8.2a1 1 0 0 1 0 1.7l-13 8.2A1 1 0 0 1 6 20.2V3.8Z" /></svg>
-        </span>
-      </div>
+      <video class="application-video" controls playsinline preload="metadata" aria-label="Katie Ensor's Fjällräven Polar application video">
+        <source src="media/Katies%20Fjallraven%20Application%281%29.mp4" type="video/mp4" />
+        Your browser does not support HTML video.
+      </video>
 
       <div class="gallery" aria-label="Image gallery">
         <!-- Replace each placeholder div with an img when your photos are ready. -->
